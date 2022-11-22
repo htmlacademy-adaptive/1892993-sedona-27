@@ -1,7 +1,7 @@
 # Личный проект «Седона» 
 
 * Студент: [Сергей Богданов](https://up.htmlacademy.ru/adaptive/27/user/1892993).
-* Наставник: `Неизвестно`.
+* Наставник: [Геннадий Максимов] (https://htmlacademy.ru/profile/gennadiy).
 
 ---
 
