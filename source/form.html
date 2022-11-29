@@ -16,16 +16,16 @@
         <div class="main-nav__wrapper">
           <ul class="main-nav__list site-list">
             <li class="site-list__item">
-              <a href="index.html">Главная</a>
+              <a class="site-list__link" href="index.html">Главная</a>
             </li>
             <li class="site-list__item">
-              <a href="catalog.html">Фото и видео</a>
+              <a class="site-list__link" href="catalog.html">Фото и видео</a>
             </li>
             <li class="site-list__item">
-              <a>Форма Отзыва</a>
+              <a class="site-list__link">Форма Отзыва</a>
             </li>
             <li class="site-list__item">
-              <a href="#nowhere">HTML ACADEMY</a>
+              <a class="site-list__link" href="#nowhere">HTML ACADEMY</a>
             </li>
           </ul>
         </div>
@@ -40,37 +40,37 @@
         <p class="introduction__text">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
       </div>
       <section class="main__form">
-        <form class="form__recall" action="#">
+        <form class="form-recall" action="#">
           <h2 class="visually-hidden">Форма отзыва</h2>
-          <fieldset class="form__recall__name__data">
-            <legend class="form__introduction">Представьтесь:</legend>
-            <label class="name__data">
-              <span class="name__data__desc">ИМЯ*:</span>
-              <input class="name__data__input" type="text" value="Пётр" required>
+          <fieldset class="form-recall__name-data">
+            <legend class="form-recall__introduction">Представьтесь:</legend>
+            <label class="name-data">
+              <span class="name-data__desc">ИМЯ*:</span>
+              <input class="name-data__input" type="text" value="Пётр" required>
             </label>
-            <label class="name__data">
-              <span class="name__data__desc">ФАМИЛИЯ*:</span>
-              <input class="name__data__input" type="text" value="Пустота" required>
+            <label class="name-data">
+              <span class="name-data__desc">ФАМИЛИЯ*:</span>
+              <input class="name-data__input" type="text" value="Пустота" required>
             </label>
-            <label class="name__data">
-              <span class="name__data__desc">Отчество:</span>
-              <input class="name__data__input" type="text" value="Викторович">
-            </label>
-          </fieldset>
-          <fieldset class="form__recall__сontact__info">
-            <legend class="form__introduction">Контактная информация:</legend>
-            <label class="сontact__info">
-              <span class="сontact__info__desc">Контактный телефон*:</span>
-              <input class="сontact__info__input" type="tel" placeholder="Введите телефон" required>
-            </label>
-            <label class="сontact__info">
-              <span class="сontact__info__desc">Электронная почта*:</span>
-              <input class="сontact__info__input" type="email" placeholder="Введите e-mail" required>
+            <label class="name-data">
+              <span class="name-data__desc">Отчество:</span>
+              <input class="name-data__input" type="text" value="Викторович">
             </label>
           </fieldset>
-          <fieldset class="form__recall__impression">
-            <legend class="form__introduction">Ваше общее впечатление:</legend>
-            <ul class="impression__list">
+          <fieldset class="form-recall__сontact__info">
+            <legend class="form-recall__introduction">Контактная информация:</legend>
+            <label class="сontact-info">
+              <span class="сontact-info__desc">Контактный телефон*:</span>
+              <input class="сontact-info__input" type="tel" placeholder="Введите телефон" required>
+            </label>
+            <label class="сontact-info">
+              <span class="сontact-info__desc">Электронная почта*:</span>
+              <input class="сontact-info__input" type="email" placeholder="Введите e-mail" required>
+            </label>
+          </fieldset>
+          <fieldset class="form-recall__impression">
+            <legend class="form-recall__introduction">Ваше общее впечатление:</legend>
+            <ul class="impression">
               <li class="impression__item">
                 <label class="impression__label">
                   <input class="option-input visually-hidden" type="radio" name="type" value="rather positive" checked>
@@ -94,9 +94,9 @@
               </li>
             </ul>
           </fieldset>
-          <fieldset class="form__recall__attractions">
-            <legend class="form__introduction">Посещенные достопримечательности:</legend>
-            <ul class="attractions__list">
+          <fieldset class="form-recall__attractions">
+            <legend class="form-recall__introduction">Посещенные достопримечательности:</legend>
+            <ul class="attractions">
               <li class="attractions__item">
                 <label class="attractions__label">
                   <input class="attractions__input visually-hidden" type="checkbox" name="Devil's Bridge" checked>
@@ -127,18 +127,18 @@
               </li>
             </ul>
           </fieldset>
-          <fieldset class="form__recall__emotions">
-            <legend class="form__introduction">Опишите свои эмоции:</legend>
-            <input class="emotions__text" type="text">
+          <fieldset class="form-recall__emotions">
+            <legend class="form-recall__introduction">Опишите свои эмоции:</legend>
+            <textarea class="form-recall__emotions-text" name="review" id="#nowhere" cols="30" rows="10" placeholder="Опишите подробно все свои восторги "></textarea>
           </fieldset>
-          <button class="form__button button" type="submit">ОТПРАВИТЬ ОТЗЫВ</button>
-          <p class="form__text">* — обязательные поля</p>
+          <button class="form-recall__button button" type="submit">ОТПРАВИТЬ ОТЗЫВ</button>
+          <p class="form-recall__text">* — обязательные поля</p>
         </form>
       </section>
     </main>
     <footer class="page__footer footer">
       <div class="footer__tag">
-        <p class="footer__tag--sedona">#visitSEDONA</p>
+        <p class="footer__tag-sedona">#visitSEDONA</p>
       </div>
       <ul class="footer__social social--list social">
         <li class="social__item"></li>
