@@ -5,11 +5,11 @@
     <title>HTML Academy: Седона</title>
   </head>
   <body class="page__body">
-    <header class="main-header">
+    <header class="page__header main-header">
       <a class="main-header__logo" href="index.html">
         <img src="../images/logo.svg" alt="Седона" width="185" height="96">
       </a>
-      <nav class="main-nav">
+      <nav class="main-header__main-nav main-nav">
         <button class="main-nav__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
@@ -30,10 +30,10 @@
           </ul>
         </div>
       </nav>
+      <div class="main-header__banner">
+        <h1 class="visually-hidden">Мы рады вас видеть у нас,Седона</h1>
+      </div>
     </header>
-    <div class="page__banner">
-      <h1 class="visually-hidden">Мы рады вас видеть у нас,Седона</h1>
-    </div>
     <main class="page__main main">
       <div class="main__introduction introduction">
         <h2 class="introduction__title">Седона — небольшой городок в аризоне, заслуживающий большего!</h2>
@@ -97,19 +97,21 @@
       <div class="hotel-search__map"></div>
     </div>
     <footer class="page__footer footer">
-      <div class="footer-tag">
-        <p class="footer-tag__sedona">#visitSEDONA</p>
-      </div>
-      <ul class="footer__social social--list social">
-        <li class="social__item"></li>
-        <li class="social__item"></li>
-        <li class="social__item"></li>
+      <p class="footer-tag__sedona">#visitSEDONA</p>
+      <ul class="footer__social social">
+        <li class="social__item">
+          <a class="social__link" href="https://vk.com/htmlacademy"></a>
+        </li>
+        <li class="social__item">
+          <a class="social__link" href="https://t.me/htmlacademy"></a>
+        </li>
+        <li class="social__item">
+          <a class="social__link" href="https://www.youtube.com/user/html"></a>
+        </li>
       </ul>
-      <div class="footer__developer developer">
-       <a href="#nowhere" class="developer__link">
-         <p class="developer__text">Разработано</p>
-       </a>
-      </div>
+      <a class="footer__link" href="https://htmlacademy.ru/">
+        <p class="footer__text">Разработано</p>
+      </a>
     </footer>
   </body>
 </html>
