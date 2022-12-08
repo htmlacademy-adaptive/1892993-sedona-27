@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Седона</title>
+  </head>
+  <body class="page__body">
+    <header class="page__header header nojs">
+      <a class="header__logo" href="index.html">
+        <img src="/images/logo.svg" alt="Седона" width="185" height="96">
+      </a>
+      <nav class="header__main-nav main-nav">
+        <button class="main-nav__toggle" type="button" aria-label="Открыть/закрыть меню"></button>
+        <ul class="main-nav__list">
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="index.html">Главная</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="catalog.html">Фото и видео</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link main-nav__link--current">Форма отзыва</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="https://htmlacademy.ru">HTML Academy</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <div class="intro">
+      <img src="" alt="" width="229" height="39">
+    </div>
+    <main class="page__main main">
+      <section class="introduction">
+        <div class="introduction__header">
+          <h1 class="introduction__title">Оставьте свой отзыв</h1>
+          <p class="introduction__text">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
+        </div>
+        <form class="form" action="#" method="get">
+          <div class="form__wrapper">
+            <fieldset class="form__block form__block--short">
+              <legend class="form__legend">Представьтесь:</legend>
+              <label class="area">
+                <span class="area__label">Имя<sup>*</sup>:</span>
+                <input class="area__input" type="text" value="Пётр" required>
+              </label>
+              <label class="area">
+                <span class="area__label">Фамилия<sup>*</sup>:</span>
+                <input class="area__input" type="text" value="Пустота" required>
+              </label>
+              <label class="area">
+                <span class="area__label">Отчество:</span>
+                <input class="area__input" type="text" value="Викторович">
+              </label>
+            </fieldset>
+            <fieldset class="form__block form__block--short">
+              <legend class="form__legend">Контактная информация:</legend>
+              <label class="area area--phone">
+                <span class="area__label">Контактный телефон<sup>*</sup>:</span>
+                <input class="area__input" type="tel" placeholder="Введите телефон" required>
+              </label>
+              <label class="area area--email">
+                <span class="area__label">Электронная почта<sup>*</sup>:</span>
+                <input class="area__input" type="email" placeholder="Введите e-mail" required>
+              </label>
+            </fieldset>
+          </div>
+          <fieldset class="form__block">
+            <legend class="form__legend">Ваше общее впечатление:</legend>
+            <ul class="form__list">
+              <li class="form__list-item">
+                <label class="option">
+                  <input class="option-input visually-hidden" type="radio" name="type" value="rather positive" checked>
+                  <span class="option__icon"></span>
+                  <span class="option__label">Скорее положительное</span>
+                </label>
+              </li>
+              <li class="form__list-item">
+                <label class="option">
+                  <input class="option__input visually-hidden" type="radio" name="type" value="rather negative">
+                  <span class="option__icon"></span>
+                  <span class="option__label">Скорее отрицательное</span>
+                </label>
+              </li>
+              <li class="form__list-item">
+                <label class="option">
+                  <input class="option__input visually-hidden" type="radio" name="type" value="Difficult to answer">
+                  <span class="option__icon"></span>
+                  <span class="option__label">Затрудняюсь ответить</span>
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="form__block">
+            <legend class="form__legend">Посещенные достопримечательности:</legend>
+            <ul class="form__list">
+              <li class="form__list-item">
+                <label class="option">
+                  <input class="option__input visually-hidden" type="checkbox" name="Devil's Bridge" checked>
+                  <span class="option__icon"></span>
+                  <span class="option__label">Мост Дьявола</span>
+                </label>
+              </li>
+              <li class="form__list-item">
+                <label class="option">
+                  <input class="option__input visually-hidden" type="checkbox" name="Mount Bell" checked>
+                  <span class="option__icon"></span>
+                  <span class="option__label">Гора-Колокол</span>
+                </label>
+              </li>
+              <li class="form__list-item">
+                <label class="option">
+                  <input class="option__input visually-hidden" type="checkbox" name="Slide park" checked>
+                  <span class="option__icon"></span>
+                  <span class="option__label">Слайд-парк</span>
+                </label>
+              </li>
+              <li class="form__list-item">
+                <label class="option">
+                  <input class="option__input visually-hidden" type="checkbox" name="Red rocks">
+                  <span class="option__icon"></span>
+                  <span class="option__label">Красные скалы</span>
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="form__block">
+            <legend class="form__legend">Опишите свои эмоции:</legend>
+            <textarea class="form__textarea" name="review" id="#nowhere" cols="30" rows="10" placeholder="Опишите подробно все свои восторги "></textarea>
+          </fieldset>
+          <button class="form__button button" type="submit">Отправить отзыв</button>
+          <p class="form__text"><sup>*</sup> — обязательные поля</p>
+        </form>
+      </section>
+    </main>
+    <footer class="page__footer footer">
+      <p class="footer__sedona">#visitsedona</p>
+      <ul class="footer__social social">
+        <li class="social__item">
+          <a class="social__link" href="https://vk.com/htmlacademy" aria-label="Наш вконтакте."></a>
+        </li>
+        <li class="social__item">
+          <a class="social__link" href="https://t.me/htmlacademy" aria-label="Наш телеграм."></a>
+        </li>
+        <li class="social__item">
+          <a class="social__link" href="https://www.youtube.com/user/html" aria-label="Наш ютуб."></a>
+        </li>
+      </ul>
+      <a class="footer__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="HTML-Academy.">Разработано</a>
+    </footer>
+  </body>
+</html>
