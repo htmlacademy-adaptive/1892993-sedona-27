@@ -1,0 +1,52 @@
+.form {
+  padding: 0;
+  margin: 0;
+}
+
+.form__legend {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.form__list {
+  list-style: none;
+}
+
+.form__textarea {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  background-color: #f2f2f2;
+  color: rgba(0, 0, 0, 0.3);
+  border: none;
+  padding: 16px;
+}
+
+.form__button {
+  display: block;
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 26px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: #81b3d2;
+  border: none;
+  padding: 16px 49px;
+  margin: 0;
+}
+
+.form__text {
+  display: block;
+  text-align: end;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 21px;
+  text-transform: uppercase;
+  color: rgba(51, 51, 51, 0.6);
+  padding: 0;
+}
