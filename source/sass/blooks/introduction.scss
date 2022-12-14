@@ -6,9 +6,6 @@
 .introduction__header {
   display: flex;
   flex-direction: column;
-
-  padding-left: 18px;
-  padding-right: 18px;
 }
 
 .introduction__title {
@@ -16,7 +13,7 @@
   font-size: 18px;
   line-height: 26px;
   text-align: center;
-  color: #000000;
+  color: $black-color;
   text-transform: uppercase;
   margin: 0;
   margin-bottom: 35px;
@@ -26,7 +23,7 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 21px;
-  color: #333333;
+  color: $light-black-color;
   text-align: center;
   text-transform: uppercase;
   margin: 0;

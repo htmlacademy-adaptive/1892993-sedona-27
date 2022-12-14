@@ -1,3 +1,4 @@
+@use "./blooks/global.scss";
 @use "./blooks/page.scss";
 @use "./blooks/header.scss";
 @use "./blooks/introduction.scss";
@@ -10,3 +11,4 @@
 @use "./blooks/form.scss";
 @use "./blooks/area.scss";
 @use "./blooks/option.scss";
+@use "variables.scss";

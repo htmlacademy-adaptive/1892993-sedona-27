@@ -9,7 +9,7 @@
   font-size: 18px;
   line-height: 26px;
   text-transform: uppercase;
-  color: #000000;
+  color: $black-color;
   text-align: center;
 }
 
@@ -18,7 +18,7 @@
   font-size: 14px;
   line-height: 21px;
   text-transform: uppercase;
-  color: #333333;
+  color: $light-black-color;
   text-align: center;
 }
 
@@ -33,7 +33,7 @@
   font-size: 18px;
   line-height: 26px;
   text-transform: uppercase;
-  color: #000000;
+  color: $black-color;
 }
 
 .availability__text {
@@ -41,6 +41,6 @@
   font-size: 14px;
   line-height: 21px;
   text-transform: uppercase;
-  color: #333333;
+  color: $light-black-color;
   text-align: center;
 }

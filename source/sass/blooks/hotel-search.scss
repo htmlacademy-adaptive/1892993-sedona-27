@@ -9,7 +9,7 @@
   line-height: 26px;
   text-transform: uppercase;
   text-align: center;
-  color: #000000;
+  color: $black-color;
 }
 
 .hotel-search__text {
@@ -18,7 +18,7 @@
   line-height: 21px;
   text-transform: uppercase;
   text-align: center;
-  color: #333333;
+  color: $light-black-color;
 }
 
 .hotel-search__button {
@@ -28,7 +28,7 @@
   line-height: 26px;
   text-align: center;
   text-transform: uppercase;
-  color: #ffffff;
-  background-color: #81B3D2;
+  color: $white-color;
+  background-color: $blue-color;
   padding: 16px 49px;
 }
