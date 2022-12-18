@@ -1,0 +1,14 @@
+@mixin reset-style {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin reset-list {
+  @include reset-style;
+  list-style: none;
+}
+
+@mixin font-reset {
+  font-size: 0;
+  line-height: 0;
+}
