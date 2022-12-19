@@ -1,0 +1,26 @@
+.media {
+  padding: 0;
+  margin: 0;
+}
+
+.media__title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 21px;
+  text-transform: uppercase;
+  color: $black-color;
+}
+
+.media__author {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  color: $light-black-color;
+}
+
+.media__like-number {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 21px;
+  color: $black-color;
+}
