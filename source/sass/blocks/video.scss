@@ -1,9 +1,5 @@
-.video {
-  padding: 0;
-  margin: 0;
-}
-
 .video__title {
+  @include reset-style;
   font-weight: 700;
   font-size: 21px;
   line-height: 26px;
@@ -19,10 +15,4 @@
   text-transform: uppercase;
   text-align: center;
   color: $light-black-color;
-}
-
-.video__container {
-  width: 280px;
-  height: 177px;
-  background-image: url("/images/video.jpg");
 }

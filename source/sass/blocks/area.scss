@@ -1,6 +1,5 @@
 .area {
-  padding: 0;
-  margin: 0;
+  @include reset-style;
 }
 
 .area__label {

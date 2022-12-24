@@ -1,6 +1,16 @@
 .media {
-  padding: 0;
-  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  @include reset-list;
+}
+
+.media__photo {
+  @include font-reset;
+  margin-bottom: 15px;
+}
+
+.media__item--key-photo {
+    width: 100%;
 }
 
 .media__title {
@@ -9,6 +19,7 @@
   line-height: 21px;
   text-transform: uppercase;
   color: $black-color;
+  @include reset-list;
 }
 
 .media__author {
@@ -16,6 +27,14 @@
   font-size: 14px;
   line-height: 21px;
   color: $light-black-color;
+}
+
+.media__like-button {
+  background-image: url("/img/like-icon.svg");
+  background-color: inherit;
+  width: 23px;
+  height: 21px;
+  border: none;
 }
 
 .media__like-number {

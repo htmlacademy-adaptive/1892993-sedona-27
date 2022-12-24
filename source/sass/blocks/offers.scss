@@ -4,26 +4,13 @@
   margin: 0;
 }
 
-.standart-cart__title {
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 26px;
-  text-transform: uppercase;
-  color: $black-color;
-  text-align: center;
-}
-
-.standart-cart__text {
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 21px;
-  text-transform: uppercase;
-  color: $light-black-color;
-  text-align: center;
-}
-
 .offers__inner-list {
   list-style: none;
   padding: 0;
   margin: 0;
+
+  @media (min-width:$tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }

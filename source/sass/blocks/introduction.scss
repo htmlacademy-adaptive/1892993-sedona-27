@@ -6,6 +6,18 @@
 .introduction__header {
   display: flex;
   flex-direction: column;
+  width: calc(100% - 36px);
+  margin: 0 18px 16px;
+
+  @media (min-width: $tablet-width) {
+    width: calc(100% - 248px);
+    margin: 0 124px 55.5px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 484px;
+    margin: 0 auto 44px;
+  }
 }
 
 .introduction__title {

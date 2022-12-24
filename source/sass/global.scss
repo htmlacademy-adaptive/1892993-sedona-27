@@ -13,18 +13,6 @@ a {
   text-decoration: none;
 }
 
-ul {
-  @include reset-list;
-}
-
 .visually-hidden {
-  position: absolute;
-  content: "";
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  border: 0;
-  clip: rect(0 0 0 0);
-  overflow: hidden;
+  @include visually-hidden;
 }
