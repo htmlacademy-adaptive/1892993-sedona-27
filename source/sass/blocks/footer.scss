@@ -1,0 +1,94 @@
+.footer {
+  @include reset-style;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  &--padding {
+    @media (min-width: $tablet-width) {
+      padding: 27px 76px 36px 62px;
+    }
+
+    @media (min-width: $desktop-width) {
+      min-height: 110px;
+      justify-content: space-around;
+      padding: 0;
+    }
+  }
+
+  &--padding-catalog {
+    @media (min-width: $tablet-width) {
+      padding: 37px 60px 36px 60px;
+    }
+
+    @media (min-width: $desktop-width) {
+      justify-content: space-between;
+      min-height: 120px;
+      padding: 0;
+      padding-left: 119px;
+      padding-right: 122px;
+    }
+  }
+
+  &--padding-form {
+    @media (min-width: $tablet-width) {
+      padding: 27px 60px 36px 60px;
+    }
+
+    @media (min-width: $desktop-width) {
+      justify-content: space-between;
+      padding: 0;
+      padding-left: 119px;
+      padding-right: 122px;
+    }
+  }
+}
+
+.footer__sedona {
+  @include reset-style;
+
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 26px;
+  text-transform: uppercase;
+  text-align: center;
+  color: $black-color;
+  margin-top: 28.5px;
+  margin-bottom: 33.5px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+  }
+}
+
+.footer .footer__social {
+  padding-bottom: 40px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+  }
+}
+
+.footer__link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 127.9px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  text-transform: uppercase;
+  color: $black-color;
+  padding-bottom: 22.9px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+  }
+}

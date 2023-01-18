@@ -1,0 +1,32 @@
+.header {
+  @include reset-style;
+
+  position: relative;
+  min-height: 56px;
+
+  .nojs & {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.header__main-nav {
+  @include reset-style;
+}
+
+.header__logo {
+  @include font-reset;
+  position: absolute;
+  width: 185px;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+
+  .nojs & {
+    margin-bottom: 10px;
+    position: static;
+    transform: none;
+  }
+}

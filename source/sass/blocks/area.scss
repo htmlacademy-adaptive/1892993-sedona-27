@@ -1,0 +1,105 @@
+.area {
+  @include reset-style;
+
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 15px;
+  }
+
+  &--margin-bottom {
+    margin-bottom: 16px;
+  }
+
+  &--phone {
+    position: relative;
+
+    ::after {
+      position: absolute;
+      content: "";
+      bottom: 0;
+      right: 0;
+      width: 58px;
+      height: 58px;
+      background-image: url("/img/phone.svg.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-color: $medium-grey-color;
+    }
+
+    @media (min-width: $tablet-width) {
+      padding-left: 18px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding-left: 0;
+    }
+  }
+
+  &--email {
+    position: relative;
+
+    ::after {
+      position: absolute;
+      content: "";
+      bottom: 0;
+      right: 0;
+      width: 58px;
+      height: 58px;
+      background-image: url("/img/mail.svg.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-color: $medium-grey-color;
+    }
+
+    @media (min-width: $tablet-width) {
+      padding-left: 18px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding-left: 0;
+    }
+  }
+}
+
+.area__label {
+  @include reset-style;
+
+  display: block;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  text-transform: uppercase;
+  padding-left: 16px;
+}
+
+.area__input {
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  color: $black-color;
+  background-color: $grey-color;
+  border: none;
+  padding: 16px;
+  padding-right: 58px;
+
+  &::placeholder {
+    color: rgba(0, 0, 0, 0.3);
+  }
+
+  &:hover {
+    background-color: $very-light-grey-color;
+  }
+
+  &:active {
+    background-color: $white-color;
+    outline: 4px solid $very-light-grey-color;
+  }
+
+  &:focus {
+    background-color: $white-color;
+    outline: 4px solid $very-light-grey-color;
+  }
+}

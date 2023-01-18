@@ -3,115 +3,183 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.min.css">
   </head>
-  <body class="page__body">
-    <header class="page__header header nojs">
-      <a class="header__logo" href="index.html">
-        <img src="/images/logo.svg" alt="Седона" width="185" height="96">
-      </a>
-      <nav class="header__main-nav main-nav">
-        <button class="main-nav__toggle" type="button" aria-label="Открыть/закрыть меню"></button>
-        <ul class="main-nav__list">
-          <li class="main-nav__item">
-            <a class="main-nav__link" href="index.html">Главная</a>
+  <body class="page__body nojs">
+    <div class="page__container">
+      <header class="page__header header">
+        <a class="header__logo" href="index.html">
+          <img src="/img/logo.svg" alt="Логотип Седона" width="185" height="96">
+        </a>
+        <nav class="header__main-nav main-nav">
+          <button class="main-nav__toggle js-toggle" type="button" aria-label="Открыть/закрыть меню.">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <ul class="main-nav__list">
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="index.html">Главная</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link main-nav__link--current">Фото и видео</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="form.html">Форма отзыва</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="https://htmlacademy.ru">HTML Academy</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <main class="page__main">
+        <h1 class="visually-hidden">Мы рады вас видеть у нас,Седона</h1>
+        <div class="intro intro--margin-bottom">
+          <div class="intro__image-container">
+            <img src="/img/SEDONA.svg" alt="Седона." width="229" height="39">
+          </div>
+        </div>
+        <section class="page__introduction introduction introduction--padding">
+          <div class="introduction__header  introduction__header--padding">
+            <h2 class="introduction__title">Фото и видео</h2>
+            <p class="introduction__text">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.</p>
+          </div>
+          <ul class="media media--margin-bottom">
+            <li class="media__item media__item--key-photo">
+              <div class="media__img">
+                <picture>
+                  <source type="image/webp" media="(min-width: 1200px)" srcset="img/photo-1-desktop.webp 1x, img/photo-1-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-1-tablet.webp 1x, img/photo-1-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/photo-1-mobile.webp 1x, img/photo-1-mobile@2x.webp 2x">
+
+                  <source media="(min-width: 1200px)" srcset="img/photo-1-desktop.jpg 1x, img/photo-1-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/photo-1-tablet.jpg 1x, img/photo-1-tablet@2x.jpg 2x">
+                  <img class="media__photo" src="/img/photo-1-mobile.jpg.jpg" srcset="/img/photo-1-mobile.jpg@2x.jpg 2x" alt="дорога в закат" width="280" height="280">
+                </picture>
+              </div>
+              <div class="media__inner">
+                <div class="media__box">
+                  <h3 class="media__title">Неродные просторы</h3>
+                  <p class="media__author">Автор фото: Борис</p>
+                </div>
+                <div class="media__box-number">
+                  <button class="media__like-button" type="button" aria-label="Лайк"></button>
+                  <span class="media__like-number">1350</span>
+                </div>
+              </div>
+            </li>
+            <li class="media__item">
+              <div class="media__img">
+                <picture>
+                  <source media="(min-width: 1200px)" srcset="img/photo-2-desktop.jpg 1x, img/photo-2-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/photo-2-tablet.jpg 1x, img/photo-2-tablet@2x.jpg 2x">
+                  <img class="media__photo" src="/img/photo-2-mobile.jpg" srcset="/img/photo-2-mobile@2x.jpg 2x" alt="цветок на фоне гор" width="280" height="280">
+                </picture>
+              </div>
+              <div class="media__inner">
+                <div class="media__box">
+                  <h3 class="media__title">Местная растительность</h3>
+                  <p class="media__author">Автор фото: Сергей</p>
+                </div>
+                <div class="media__box-number">
+                  <button class="media__like-button" type="button" aria-label="Лайк"></button>
+                  <span class="media__like-number">143</span>
+                </div>
+              </div>
+            </li>
+            <li class="media__item">
+              <div class="media__img">
+                <picture>
+                  <source media="(min-width: 1200px)" srcset="img/photo-3-desktop.jpg 1x, img/photo-3-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/photo-3-tablet.jpg 1x, img/photo-3-tablet@2x.jpg 2x">
+                  <img class="media__photo" src="/img/photo-3-mobile.jpg" srcset="/img/photo-3-mobile@2x.jpg 2x" alt="асфальтированная дорога в гуще леса с серпантиннами" width="280" height="280">
+                </picture>
+              </div>
+              <div class="media__inner media__inner--bg">
+                <div class="media__box">
+                  <h3 class="media__title">Дорога на север</h3>
+                  <p class="media__author">Автор фото: Петр</p>
+                </div>
+                <div class="media__box-number">
+                  <button class="media__like-button" type="button" aria-label="Лайк"></button>
+                  <span class="media__like-number">96</span>
+                </div>
+              </div>
+            </li>
+            <li class="media__item">
+              <div class="media__img">
+                <picture>
+                  <source media="(min-width: 1200px)" srcset="img/photo-4-desktop.jpg 1x, img/photo-4-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/photo-4-tablet.jpg 1x, img/photo-4-tablet@2x.jpg 2x">
+                  <img class="media__photo" src="/img/photo-4-mobile.jpg" srcset="/img/photo-4-mobile@2x.jpg 2x" alt="каньон" width="280" height="280">
+                </picture>
+              </div>
+              <div class="media__inner">
+                <div class="media__box">
+                  <h3 class="media__title">Мост дьявола</h3>
+                  <p class="media__author">Автор фото: Антон</p>
+                </div>
+                <div class="media__box-number">
+                  <button class="media__like-button" type="button" aria-label="Лайк"></button>
+                  <span class="media__like-number">254</span>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <div class="video video--padding">
+            <div class="video__text-box">
+              <h2 class="video__title">Все еще сомневаетесь?</h2>
+              <p class="video__text">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
+            </div>
+            <div class="video__container">
+              <picture>
+                <source media="(min-width: 1200px)" srcset="img/video-desktop.jpg 1x, img/video-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/video-tablet.jpg 1x, img/video-tablet@2x.jpg 2x">
+                <img class="video__img" src="/img/video-mobile.jpg" srcset="/img/video-mobile@2x.jpg 2x" alt="Презентационное видео." width="280" height="177">
+              </picture>
+              <button class="video__button">
+                <svg width="48" height="54" viewBox="0 0 48 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M48 27L0 54L2.42273e-06 0L48 27Z" fill="white" fill-opacity="0.7"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="page__footer footer footer--padding footer--padding-catalog">
+        <p class="footer__sedona">#visitsedona</p>
+        <ul class="footer__social social">
+          <li class="social__item">
+            <a class="social__link" href="https://vk.com/htmlacademy" aria-label="Наша страница вконтакте.">
+              <svg width="24" height="24">
+                <use href="img/sprite.svg#icon-vk"></use>
+              </svg>
+            </a>
           </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link main-nav__link--current">Фото и видео</a>
+          <li class="social__item">
+            <a class="social__link" href="https://t.me/htmlacademy" aria-label="Наш канал в телеграме.">
+              <svg width="24" height="24">
+                <use href="img/sprite.svg#icon-telegram"></use>
+              </svg>
+            </a>
           </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link" href="form.html">Форма отзыва</a>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link" href="https://htmlacademy.ru">HTML Academy</a>
+          <li class="social__item">
+            <a class="social__link" href="https://www.youtube.com/user/html" aria-label="Наш канал в ютубе.">
+              <svg width="24" height="24">
+                <use href="img/sprite.svg#icon-youtube"></use>
+              </svg>
+            </a>
           </li>
         </ul>
-      </nav>
-    </header>
-    <main class="page__main main">
-      <h1 class="visually-hidden">Мы рады вас видеть у нас,Седона</h1>
-      <div class="intro">
-        <img src="#" alt="" width="229" height="39">
-      </div>
-      <section class="media">
-        <div class="media__introduction introduction">
-          <h2 class="introduction__title">Фото и видео</h2>
-          <p class="introduction__text">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.</p>
-        </div>
-        <ul class="media__list">
-          <li class="media__item">
-            <img src="#" alt="дорога в закат" width="280" height="280">
-            <div class="media__inner">
-              <div class="media__box">
-                <h3 class="media__title">Неродные просторы</h3>
-                <p class="media__author">Автор фото: Борис</p>
-              </div>
-              <div class="media__box">
-                <button class="media__like-button" type="button" aria-label="Лайк"></button>
-                <span class="media__like-number">1350</span>
-              </div>
-            </div>
-          </li>
-          <li class="media__item">
-            <img src="#" alt="цветок на фоне гор" width="280" height="280">
-            <div class="media__inner">
-              <div class="media__box">
-                <h3 class="media__title">Местная растительность</h3>
-                <p class="media__author">Автор фото: Сергей</p>
-              </div>
-              <div class="media__box">
-                <button class="media__like-button" type="button" aria-label="Лайк"></button>
-                <span class="media__like-number">143</span>
-              </div>
-            </div>
-          </li>
-          <li class="media__item">
-            <img src="#" alt="асфальтированная дорога в гуще леса с серпантиннами" width="280" height="280">
-            <div class="media__inner">
-              <div class="media__box">
-                <h3 class="media__title">Дорога на север</h3>
-                <p class="media__author">Автор фото: Петр</p>
-              </div>
-              <div class="media__box">
-                <button class="media__like-button" type="button" aria-label="Лайк"></button>
-                <span class="media__like-number">96</span>
-              </div>
-            </div>
-          </li>
-          <li class="media__item">
-            <img src="#" alt="каньон" width="280" height="280">
-            <div class="media__inner">
-              <div class="media__box">
-                <h3 class="media__title">Мост дьявола</h3>
-                <p class="media__author">Автор фото: Антон</p>
-              </div>
-              <div class="media__box">
-                <button class="media__like-button" type="button" aria-label="Лайк"></button>
-                <span class="media__like-number">254</span>
-              </div>
-            </div>
-          </li>
-        </ul>
-        <div class="media__container video">
-          <h2 class="video__title">Все еще сомневаетесь?</h2>
-          <p class="video__text">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
-          <div class="video__container"></div>
-        </div>
-      </section>
-    </main>
-    <footer class="page__footer footer">
-      <p class="footer__sedona">#visitsedona</p>
-      <ul class="footer__social social">
-        <li class="social__item">
-          <a class="social__link" href="https://vk.com/htmlacademy" aria-label="Наш вконтакте."></a>
-        </li>
-        <li class="social__item">
-          <a class="social__link" href="https://t.me/htmlacademy" aria-label="Наш телеграм."></a>
-        </li>
-        <li class="social__item">
-          <a class="social__link" href="https://www.youtube.com/user/html" aria-label="Наш ютуб."></a>
-        </li>
-      </ul>
-      <a class="footer__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="HTML-Academy.">Разработано</a>
-    </footer>
+        <a class="footer__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Сайт HTML Academy.">Разработано
+          <svg width="27" height="35">
+            <use href="img/sprite.svg#icon-academy"></use>
+          </svg>
+        </a>
+      </footer>
+    </div>
+    <script src="/js/app.js"></script>
   </body>
 </html>
