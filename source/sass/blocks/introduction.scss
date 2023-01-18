@@ -1,24 +1,69 @@
 .introduction {
-  padding: 0;
-  margin: 0;
+  @include reset-style;
+
+  &--padding {
+    @media (min-width: $tablet-width) {
+      padding: 0 60px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding: 0;
+    }
+  }
 }
 
 .introduction__header {
   display: flex;
   flex-direction: column;
-  width: calc(100% - 36px);
-  margin: 0 18px 16px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 18px 16px;
 
   @media (min-width: $tablet-width) {
-    width: calc(100% - 248px);
-    margin: 0 124px 55.5px;
+    width: 520px;
+    padding: 0;
+    margin: 0 auto 55.5px;
   }
 
   @media (min-width: $desktop-width) {
+    @include reset-style;
+
     width: 484px;
     margin: 0 auto 44px;
   }
+
+  &--padding {
+    @include reset-style;
+
+    padding: 0 20px 11px;
+    margin-bottom: 25px;
+
+    @media (min-width: $tablet-width) {
+      width: 458px;
+      margin: 0 auto 81px;
+      padding: 0 10px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-bottom: 87px;
+    }
+  }
+
+  &--form {
+    padding: 0 20px 28px;
+
+    @media (min-width: $tablet-width) {
+      width: 435px;
+      padding: 0;
+      margin-bottom: 105px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-bottom: 70px;
+    }
+  }
 }
+
 
 .introduction__title {
   font-weight: 700;
@@ -28,7 +73,36 @@
   color: $black-color;
   text-transform: uppercase;
   margin: 0;
-  margin-bottom: 35px;
+  margin-bottom: 26px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 30px;
+    margin-bottom: 31px;
+  }
+
+  &--index {
+    padding: 0 10px;
+    margin-bottom: 37px;
+
+    @media (min-width: $tablet-width) {
+      font-size: 21px;
+      margin-top: 18px;
+      margin-bottom: 28px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-top: 28px;
+      margin-bottom: 28px;
+    }
+  }
+
+  &--form {
+    margin-bottom: 23px;
+
+    @media (min-width: $desktop-width) {
+      margin-bottom: 31px;
+    }
+  }
 }
 
 .introduction__text {

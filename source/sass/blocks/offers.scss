@@ -1,16 +1,18 @@
 .offers {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+  @include reset-list;
+
+  position: relative;
 }
 
 .offers__inner-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+  @include reset-list;
 
-  @media (min-width:$tablet-width) {
+  padding: 0 18px;
+  background-color: $light-grey-color;
+
+  @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    padding: 0;
   }
 }

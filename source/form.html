@@ -4,7 +4,9 @@
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon32.png">
   </head>
   <body class="page__body nojs">
     <div class="page__container">
@@ -13,7 +15,11 @@
           <img src="/img/logo.svg" alt="Логотип Седона" width="185" height="96">
         </a>
         <nav class="header__main-nav main-nav">
-          <button class="main-nav__toggle" type="button" aria-label="Открыть/закрыть меню"></button>
+          <button class="main-nav__toggle js-toggle" type="button" aria-label="Открыть/закрыть меню.">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
           <ul class="main-nav__list">
             <li class="main-nav__item">
               <a class="main-nav__link" href="index.html">Главная</a>
@@ -30,50 +36,52 @@
           </ul>
         </nav>
       </header>
-      <div class="intro">
-        <img src="" alt="" width="229" height="39">
+      <div class="intro intro--margin-bottom intro--form">
+        <div class="intro__image-container">
+          <img src="/img/SEDONA.svg" alt="Седона." width="229" height="39">
+        </div>
       </div>
-      <main class="page__main main">
+      <main class="page__main">
         <section class="introduction">
-          <div class="introduction__header">
-            <h1 class="introduction__title">Оставьте свой отзыв</h1>
+          <div class="introduction__header introduction__header--form">
+            <h1 class="introduction__title introduction__title--form">Оставьте свой отзыв</h1>
             <p class="introduction__text">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
           </div>
-          <form class="form" action="#" method="get">
+          <form class="form form--margin" action="#" method="get">
             <div class="form__wrapper">
-              <fieldset class="form__block form__block--short">
-                <legend class="form__legend">Представьтесь:</legend>
-                <label class="area">
-                  <span class="area__label">Имя<sup>*</sup>:</span>
-                  <input class="area__input" type="text" value="Пётр" required>
+              <div class="form__block form__block--short form__block--name">
+                <p class="form__legend form__legend--name">Представьтесь:</p>
+                <label class="area area--margin-bottom">
+                  <span class="area__label">Имя*:</span>
+                  <input class="area__input" type="text" value="Пётр" placeholder="Имя" required>
                 </label>
-                <label class="area">
-                  <span class="area__label">Фамилия<sup>*</sup>:</span>
-                  <input class="area__input" type="text" value="Пустота" required>
+                <label class="area area--margin-bottom">
+                  <span class="area__label">Фамилия*:</span>
+                  <input class="area__input" type="text" value="Пустота" placeholder="Фамилия" required>
                 </label>
                 <label class="area">
                   <span class="area__label">Отчество:</span>
-                  <input class="area__input" type="text" value="Викторович">
+                  <input class="area__input" type="text" placeholder="Отчество" value="Викторович">
                 </label>
-              </fieldset>
-              <fieldset class="form__block form__block--short">
-                <legend class="form__legend">Контактная информация:</legend>
-                <label class="area area--phone">
-                  <span class="area__label">Контактный телефон<sup>*</sup>:</span>
-                  <input class="area__input" type="tel" placeholder="Введите телефон" required>
+              </div>
+              <div class="form__block form__block--short form__block--contact">
+                <p class="form__legend form__legend--contact">Контактная информация:</p>
+                <label class="area area--margin-bottom area--phone">
+                  <span class="area__label">Контактный телефон*:</span>
+                  <input class="area__input area__input--phone" type="tel" placeholder="Введите телефон" required>
                 </label>
                 <label class="area area--email">
-                  <span class="area__label">Электронная почта<sup>*</sup>:</span>
+                  <span class="area__label">Электронная почта*:</span>
                   <input class="area__input" type="email" placeholder="Введите e-mail" required>
                 </label>
-              </fieldset>
+              </div>
             </div>
-            <fieldset class="form__block">
-              <legend class="form__legend">Ваше общее впечатление:</legend>
-              <ul class="form__list">
+            <div class="form__block form__block--impression">
+              <p class="form__legend form__legend--impression">Ваше общее впечатление:</p>
+              <ul class="form__list form__list--impression">
                 <li class="form__list-item">
                   <label class="option">
-                    <input class="option-input visually-hidden" type="radio" name="type" value="rather positive" checked>
+                    <input class="option__input visually-hidden" type="radio" name="type" value="rather positive" checked>
                     <span class="option__icon"></span>
                     <span class="option__label">Скорее положительное</span>
                   </label>
@@ -93,10 +101,10 @@
                   </label>
                 </li>
               </ul>
-            </fieldset>
-            <fieldset class="form__block">
-              <legend class="form__legend">Посещенные достопримечательности:</legend>
-              <ul class="form__list">
+            </div>
+            <div class="form__block form__block--attractions">
+              <p class="form__legend form__legend--attractions">Посещенные достопримечательности:</p>
+              <ul class="form__list form__list--attractions">
                 <li class="form__list-item">
                   <label class="option">
                     <input class="option__input visually-hidden" type="checkbox" name="Devil's Bridge" checked>
@@ -126,51 +134,70 @@
                   </label>
                 </li>
               </ul>
-            </fieldset>
-            <fieldset class="form__block">
-              <legend class="form__legend">Опишите свои эмоции:</legend>
-              <textarea class="form__textarea" name="review" id="#nowhere" cols="20" rows="5" placeholder="Опишите подробно все свои восторги "></textarea>
-            </fieldset>
-            <button class="form__button button" type="submit">Отправить отзыв</button>
-            <p class="form__text"><sup>*</sup> — обязательные поля</p>
+            </div>
+            <div class="form__block  form__block--review">
+              <p class="form__legend form__legend--review">Опишите свои эмоции:</p>
+              <textarea class="form__textarea" name="review" id="#nowhere" cols="20" rows="4" placeholder="Опишите подробно все свои восторги "></textarea>
+            </div>
+            <div class="form__button-container">
+              <button class="form__button button" type="submit">Отправить отзыв</button>
+              <p class="form__text">* — обязательные поля</p>
+            </div>
           </form>
         </section>
       </main>
-      <footer class="page__footer footer">
+      <footer class="page__footer footer footer--padding footer--padding-form">
         <p class="footer__sedona">#visitsedona</p>
         <ul class="footer__social social">
           <li class="social__item">
-            <a class="social__link" href="https://vk.com/htmlacademy" aria-label="Наш вконтакте.">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"><g clip-path="url(#a)"><path fill="#fff" fill-rule="evenodd"
-                d="M23.4 6c.2-.6 0-1-.7-1H20c-.6 0-1 .3-1.1.7 0 0-1.3 3.2-3.2 5.3-.7.6-1 .8-1.3.8-.1 0-.4-.2-.4-.7V5.9c0-.6-.2-.9-.7-.9H9.2c-.5 0-.7.3-.7.6
-                0 .6 1 .8 1 2.5V12c0 .8-.1 1-.5 1-.9 0-3-3.2-4.3-6.9-.3-.7-.5-1-1.2-1H1c-.8 0-.9.3-.9.7 0 .7.9 4.1 4.1 8.6 2.2 3 5.3 4.7 8 4.7 1.7 0 2-.4 2-1v-2.3c0-.8
-                0-.9.6-.9.4 0 1 .2 2.6 1.7 1.8 1.7 2.1 2.5 3.1 2.5H23c.8 0 1.2-.4 1-1.1-.3-.7-1.1-1.8-2.3-3L20 13c-.4-.5-.3-.7 0-1.1 0 0 3.2-4.4 3.5-6Z"
-                clip-rule="evenodd"/></g><defs><clipPath id="a"><path fill="#fff" d="M0 0h24v24H0z"/></clipPath></defs>
+            <a class="social__link" href="https://vk.com/htmlacademy" aria-label="Наша страница вконтакте.">
+              <svg width="24" height="24">
+                <use href="img/sprite.svg#icon-vk"></use>
               </svg>
             </a>
           </li>
           <li class="social__item">
-            <a class="social__link" href="https://t.me/htmlacademy" aria-label="Наш телеграм.">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"><path fill="#fff" d="m22.4 4.6-3.1 15c-.3 1-.9 1.3-1.8.8l-4.8-3.6-2.3 2.3c-.3.2-.5.4-1
-                .4l.3-4.9 9-8c.4-.4-.1-.6-.6-.3l-11 7-4.8-1.5c-1-.3-1-1 .2-1.5L21 3c.9-.3 1.6.2 1.3 1.5Z"/>
+            <a class="social__link" href="https://t.me/htmlacademy" aria-label="Наш канал в телеграме.">
+              <svg width="24" height="24">
+                <use href="img/sprite.svg#icon-telegram"></use>
               </svg>
             </a>
           </li>
           <li class="social__item">
-            <a class="social__link" href="https://www.youtube.com/user/html" aria-label="Наш ютуб.">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"><path fill="#fff" d="M19.2 5H4.8A2.9 2.9 0 0 0 2
-                7.8v8.3C2 17.7 3.3 19 4.8 19h14.4c1.6 0 2.8-1.3 2.8-2.8V7.8C22 6.3 20.8 5 19.2 5ZM9 15.4V8.6L16 12 9 15.4Z"/>
+            <a class="social__link" href="https://www.youtube.com/user/html" aria-label="Наш канал в ютубе.">
+              <svg width="24" height="24">
+                <use href="img/sprite.svg#icon-youtube"></use>
               </svg>
             </a>
           </li>
         </ul>
-        <a class="footer__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="HTML-Academy.">Разработано
-          <svg xmlns="http://www.w3.org/2000/svg" width="27" height="35" fill="none"><path fill="#000" d="M13.6 0h-.1L0 1.4v24.7l13.5 8 13.4-8V1.4L13.6 0ZM25 12.1 13.5
-            5.3v-.1h-.1l-.1-.1v.1L1.9 12.1v-9l11.5-1.2L25 3.1v9ZM13.4 6.8l11.5 6.7-4.5 2.6-7.1-4.2v1.4l5.9 3.5-.9.5-5-3v1.4l3.8 2.3-.8.5-3-1.8v1.4l1.9 1.1-1.8 1.1L2
-            13.6l11.4-6.8ZM1.9 15.1l11.4 6.8v1l-7.9-4.7v1.4l8 4.8v1.1l-8-4.7v1.4l8 4.8 8.1-4.9v-5.2l3.4-2v10l-11.5 6.9L1.9 25v-9.9Z"/>
+        <a class="footer__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Сайт HTML Academy.">Разработано
+          <svg width="27" height="35">
+            <use href="img/sprite.svg#icon-academy"></use>
           </svg>
         </a>
       </footer>
+      <!-- Для отображения ошибки добавить модификатор popup--show блокy id="popup-error" -->
+      <div class="popup" id="popup-error">
+        <div class="popup__container">
+          <h2 class="popup__title">Что-то пошло не так!</h2>
+          <p class="popup__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+          <button class="popup__button" type="button">Ок</button>
+        </div>
+      </div>
+      <!-- Для отображения удачной отправки добавить модификатор popup--show блокy id="popup-accepted" -->
+      <div class="popup" id="popup-accepted">
+        <div class="popup__container popup__container--accepted">
+          <div class="popup__text-box">
+            <h2 class="popup__title popup__title--accepted">Ваш отзыв отправлен!</h2>
+            <p class="popup__text popup__text--accepted">Спасибо за ваше участие, ваш отзыв уже поступил к нам. <br>В ближайшее время мы опубликуем его на сайте.</p>
+          </div>
+          <div class="popup__button-box">
+            <button class="popup__button popup__button--accepted" type="button">Закрыть окно</button>
+          </div>
+        </div>
+      </div>
     </div>
+    <script src="/js/app.js"></script>
   </body>
 </html>

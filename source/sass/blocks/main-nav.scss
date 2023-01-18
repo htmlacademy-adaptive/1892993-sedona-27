@@ -3,26 +3,31 @@
 }
 
 .main-nav__list {
+  @include reset-list;
+
+  display: none;
   width: 100%;
   background-color: $blue-color;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  align-content: center;
-  list-style: none;
-  padding: 0;
-  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: inherit;
+  }
 
   .nojs & {
     display: block;
   }
 
-  .show-menu & {
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 2;
+  @media (max-width: 767px) {
+    .show-menu & {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 2;
+    }
   }
 }
 
@@ -30,6 +35,15 @@
   width: 100%;
   box-shadow: 0 1px 0 rgba(1, 1, 1, 0.2);
   min-height: 55px;
+
+  @media (min-width: $tablet-width) {
+    box-shadow: none;
+    width: auto;
+
+    &:nth-child(3) {
+      margin-left: auto;
+    }
+  }
 }
 
 .main-nav__link {
@@ -41,22 +55,84 @@
   color: $white-color;
   text-transform: uppercase;
   padding: 17px 70px 12px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 14px;
+    line-height: 21px;
+    width: 153px;
+    color: $black-color;
+    padding: 18px 0 17px 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 240px;
+  }
+
+  &--current {
+    @media (min-width: $tablet-width) {
+      color: $brown-color;
+    }
+  }
 }
 
 .main-nav__toggle {
-  width: 20px;
-  height: 20px;
-  background-color:blueviolet;
   position: absolute;
-  right: 15px;
-  top: 15px;
+  content: "";
+  width: 23px;
+  height: 22px;
+  border: none;
+  right: 20px;
+  top: 17px;
   z-index: 3;
+  background-color: inherit;
+  cursor: pointer;
+  padding: 0;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
 
   .nojs & {
     display: none;
   }
+}
 
-  .show-menu & {
-    background-color: red;
+.main-nav__toggle span {
+  display: block;
+  background-color: $blue-color;
+  height: 4px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+
+  &:nth-child(1) {
+    top: 0;
+
+    .show-menu & {
+      background-color: $white-color;
+      top: 50%;
+      transform: translateY(-50%) rotate(45deg);
+    }
+  }
+
+
+  &:nth-child(2) {
+    top: 50%;
+    transform: translateY(-50%);
+
+    .show-menu & {
+      display: none;
+    }
+  }
+
+  &:nth-child(3) {
+    bottom: 0;
+
+    .show-menu & {
+      background-color: #ffffff;
+      bottom: auto;
+      top: 50%;
+      transform: translateY(-50%) rotate(-45deg);
+    }
   }
 }
