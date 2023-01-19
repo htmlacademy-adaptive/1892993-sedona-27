@@ -1,6 +1,17 @@
 .option {
-  padding: 0;
-  margin: 0;
+  @include reset-style;
+
+  display: flex;
+  align-items: center;
+}
+
+.option__icon {
+  display: block;
+  flex-shrink: 0;
+  width: 46px;
+  height: 46px;
+  background-color: $grey-color;
+  margin-right: 16px;
 }
 
 .option__label {
@@ -8,4 +19,41 @@
   font-size: 18px;
   line-height: 26px;
   color: $black-color;
+}
+
+.option__input[type="checkbox"] ~ .option__icon {
+  border-radius: 5px;
+}
+
+.option__input[type="radio"] ~ .option__icon {
+  border-radius: 50%;
+}
+
+.option__input[type="checkbox"]:checked ~ .option__icon {
+  background-image: url("/img/tick.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.option__input[type="radio"]:checked ~ .option__icon {
+  background-image: url("/img/circle.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.option__input:disabled ~ .option__icon,
+.option__input:disabled ~ .option__label {
+  opacity: 0.5;
+}
+
+.option__input[type="checkbox"]:hover:not(:disabled) ~ .option__icon,
+.option__input[type="radio"]:hover:not(:disabled) ~ .option__icon,
+.option__input[type="checkbox"]:focus:not(:disabled) ~ .option__icon,
+.option__input[type="radio"]:focus:not(:disabled) ~ .option__icon {
+  background-color: $very-light-grey-color;
+}
+
+.option__input[type="checkbox"]:active:not(:disabled) ~ .option__icon,
+.option__input[type="radio"]:active:not(:disabled) ~ .option__icon {
+  background-color: $very-dark-grey-color;
 }
