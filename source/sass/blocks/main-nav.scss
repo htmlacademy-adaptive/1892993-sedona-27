@@ -18,6 +18,13 @@
 
   .nojs & {
     display: block;
+
+    @media (min-width: $tablet-width) {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      background-color: inherit;
+    }
   }
 
   @media (max-width: 767px) {

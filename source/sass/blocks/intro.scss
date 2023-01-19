@@ -65,13 +65,13 @@
   }
 
   @media (min-width: $desktop-width) {
-    background-image: url("/img/back-desktop.jpg.png");
+    background-image: url("/img/back-desktop.png");
     padding-top: 78px;
     padding-bottom: 90.3px;
   }
 
   @media (min-width: $desktop-width) and (min-resolution: 2dppx) {
-    background-image: url("/img/back-desktop.jpg@2x.png");
+    background-image: url("/img/back-desktop@2x.png");
   }
 }
 

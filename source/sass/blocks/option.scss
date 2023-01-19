@@ -47,7 +47,9 @@
 }
 
 .option__input[type="checkbox"]:hover:not(:disabled) ~ .option__icon,
-.option__input[type="radio"]:hover:not(:disabled) ~ .option__icon {
+.option__input[type="radio"]:hover:not(:disabled) ~ .option__icon,
+.option__input[type="checkbox"]:focus:not(:disabled) ~ .option__icon,
+.option__input[type="radio"]:focus:not(:disabled) ~ .option__icon {
   background-color: $very-light-grey-color;
 }
 
