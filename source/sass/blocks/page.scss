@@ -3,14 +3,15 @@
 }
 
 .page__body {
+  @include reset-style;
+
   font-family: "PT Sans", "Arial", sans-serif;
   width: 100%;
   min-height: 100%;
   min-width: $min-width;
   background-color: $grey-color;
   color: $light-black-color;
-  margin: 0;
-  padding: 0;
+  overflow-x: hidden;
 }
 
 .page__container {
